@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Runtime.Intrinsics.X86;
+using System.Xml.Linq;
 
 namespace BinarySearchDemo
 {
@@ -7,7 +8,7 @@ namespace BinarySearchDemo
     {
         static void Main(string[] args)
         {
-            //UC2 Ability to create thebinary tree shown in thefigure- Check if all are added with using sizemethod in Binary Tree
+            //UC3 Ability to search in the Binary Tree- Implement Search method and recursively search left or right nodes to find 63
             BinarySTDemo<int> binarSearchTree = new BinarySTDemo<int>(56);
             binarSearchTree.Insert(30);
             binarSearchTree.Insert(70);
@@ -23,6 +24,8 @@ namespace BinarySearchDemo
             binarSearchTree.Insert(67);
             binarSearchTree.Display();
             binarSearchTree.GetSize();
+            bool result = binarSearchTree.IfExists(63, binarSearchTree);
+            Console.WriteLine(result);
             Console.ReadKey();
         }
     }
